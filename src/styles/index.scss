@@ -38,43 +38,44 @@ ol {
 
 .link {
   margin-right: 20px;
-}
 
-.link:last-child {
-  margin-right: 0;
-}
+  &:last-child {
+    margin-right: 0;
+  }
 
-.link__name {
-  color: $color-darkblue;
-  text-decoration: none;
-  display: flex;
-  text-align: center;
-  text-transform: uppercase;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  font-weight: 500;
-  font-size: 12px;
-}
+  &__name {
+    color: $color-darkblue;
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-weight: 500;
+    font-size: 12px;
 
-.link__name:hover {
-  color: $color-blue;
+    &:hover {
+      color: $color-blue;
+      transition: color 300ms ease;
+    }
+  }
 }
 
 .is-active {
   color: $color-blue;
   position: relative;
-}
 
-.is-active::after {
-  background-color: $color-blue;
-  content: '';
-  border-radius: 8px;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  display: block;
-  position: absolute;
+  &::after {
+    background-color: $color-blue;
+    content: '';
+    border-radius: 8px;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+  }
 }
 
 main {
@@ -109,7 +110,8 @@ main {
 .card {
   padding: 16px;
   padding-top: 32px;
-  width: 166px;
+  width: 200px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   background-color: $color-white;
@@ -181,13 +183,14 @@ main {
     font-weight: 700;
     border: 1px solid transparent;
     color: $color-white;
-  }
 
-  &__button:hover {
-    border: 1px solid $color-blue;
-    background-color: transparent;
-    color: $color-blue;
-    cursor: pointer;
+    &:hover {
+      border: 1px solid $color-blue;
+      background-color: transparent;
+      transition: all 300ms ease;
+      color: $color-blue;
+      cursor: pointer;
+    }
   }
 }
 
